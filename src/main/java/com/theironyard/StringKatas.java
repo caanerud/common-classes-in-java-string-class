@@ -38,61 +38,70 @@ public class StringKatas {
      */
     // todo: implement helloName() method
     public static String helloName(String name) {
-        return "Hello" + name + "!";
+        return "Hello " + name + "!";
     }
+
     /**
      * Create a publicly accessible static method that does the following:
-     *
+     * <p>
      * Given an "out" string length 4, such as "<<>>", and a word, return a new
      * string where the word is in the middle of the out string, e.g.
      * "<<word>>". Note: use str.substring(i, j) to extract the String starting
      * at index i and going up to but not including index j.
-     *
+     * <p>
      * makeOutWord("<<>>", "Yay") → "<<Yay>>"
      * makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
      * makeOutWord("[[]]", "word") → "[[word]]"
-     *
+     * <p>
      * This exercise is on CodingBat at http://codingbat.com/prob/p184030
-     *
+     * <p>
      * Note: You will need to use string concatenation as well as other  methods
      * on the string class to solve this problem. Pay particular attention to
      * the documentation as it relates to inclusiveness.
      *
-     * @param out A four-letter string such as "[[]]"
+     * @param out  A four-letter string such as "[[]]"
      * @param word A word to place in the middle of the value of the `out` argument
      * @return A string with the word `word` placed in the middle of the `out` argument
      */
     // todo: implement makeOutWord() method
+    public static String makeOutWord(String out, String word) {
+        String str = out.substring(0, 2) + word + out.substring(2, 4);
+        return str;
+    }
 
     /**
      * Create a publicly accessible static method that does the following:
-     *
+     * <p>
      * Given a string of even length, return the first half. So the string
      * "WooHoo" yields "Woo".
-     *
+     * <p>
      * firstHalf("WooHoo") → "Woo"
      * firstHalf("HelloThere") → "Hello"
      * firstHalf("abcdef") → "abc"
-     *
+     * <p>
      * This exercise is on CodingBat at http://codingbat.com/prob/p172267
      *
      * @param str The string to return the first half of.
      * @return The first half of the string provided
      */
     // todo: implement firstHalf() method
+    public static String firstHalf(String str) {
+        int cut = str.length() / 2;
+        return str.substring(0, cut);
+    }
 
     /**
      * Create a publicly accessible static method that does the following:
-     *
+     * <p>
      * Given a string and an int n, return a string made of the first and last n
      * chars from the string. The string length will be at least n.
-     *
+     * <p>
      * nTwice("Hello", 2) → "Helo"
      * nTwice("Chocolate", 3) → "Choate"
      * nTwice("Chocolate", 1) → "Ce"
-     *
+     * <p>
      * This exercise is on CodingBat at http://codingbat.com/prob/p174148
-     *
+     * <p>
      * Hint: With problems like this it is often useful to break it down into
      * a process (also known as an algorithm). Maybe you could attack this
      * problem by first getting the first n characters and making sure that
@@ -103,9 +112,11 @@ public class StringKatas {
      * a solution.
      *
      * @param str The string to extract the first/last characters from
-     * @param n The number of characters to extract.
+     * @param n   The number of characters to extract.
      * @return A string made up of the first n and last n characters of `str` concatenated together
      */
     // todo: implement nTwice() method
-
+    public static String nTwice(String str, int n) {
+        return str.substring(0, n) + str.substring(str.length() - n, str.length());
+    }
 }
