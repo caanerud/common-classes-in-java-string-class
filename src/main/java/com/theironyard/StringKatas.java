@@ -6,38 +6,40 @@ package com.theironyard;
  * from martial arts. In martial arts, katas are repetitive simple training
  * exercises. The idea is that, by doing the same movement or exercise over and
  * over again, it becomes second nature.
- *
+ * <p>
  * In programming a kata is similar. It's a simple exercise that helps you
  * practice basic programming skills. They can be repeated from time to time to
  * help you keep your coding skills sharp and practice new techniques.
- *
+ * <p>
  * The methods you will be creating are based off of katas from CodingBat.
  * You can see all of CodingBat's exercises at http://codingbat.com/.
- *
+ * <p>
  * Each of the katas below are focused on string manipulation.
  */
 public class StringKatas {
 
     /**
      * Create a publicly accessible static method that does the following:
-     *
+     * <p>
      * Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
-     *
+     * <p>
      * Examples:
-     *
+     * <p>
      * helloName("Bob") → "Hello Bob!"
      * helloName("Alice") → "Hello Alice!"
      * helloName("X") → "Hello X!"
-     *
+     * <p>
      * This exercise is on CodingBat at http://codingbat.com/prob/p171896
-     *
+     * <p>
      * Note: You will need to use string concatenation to solve this problem.
      *
      * @param name The name you are greeting EG: "Bob"
      * @return A string greeting the name. EG: "Hello Bob!"
      */
     // todo: implement helloName() method
-
+    public static String helloName(String name) {
+        return "Hello" + name + "!";
+    }
     /**
      * Create a publicly accessible static method that does the following:
      *
